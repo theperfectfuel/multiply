@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js" type="text/javascript"></script>
+	<script src="js/myApp.js"></script>
+</head>
+<body ng-controller="myCtrl">
+	{{greeting}}
+
+	<div>
+		<input type="number" ng-model="numberLimit" placeholder="Enter a number" />
+		<table myNumLimit="10">
+			<tr ng-repeat="x in numbers()">
+				<td ng-repeat="y in numbers()">{{compute(x, y)}}</td>
+			</tr>
+		</table>
+	</div>
+
+</body>
+</html>
